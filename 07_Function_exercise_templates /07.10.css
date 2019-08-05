@@ -1,0 +1,9 @@
+label {
+	display: block;
+	width: 5em;
+	float: left;
+}
+html {
+  font-size: 15px;
+  padding: 30px 30px 10px 10px; 
+} 

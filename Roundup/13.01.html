@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Temperature converter</title>
+</head>
+
+<body>
+	<h1>Temperature converter</h1>
+	<form>
+		<p>
+			<label for="conversion">Conversion</label>
+			<select id="conversion" name="conversion">
+				<option value="Fahrenheit to Celsius">Fahrenheit to Celsius </option>
+				<option value="Celcius to Fahrenheit">Celcius to Fahrenheit </option>
+			</select>
+		</p>
+		<p>
+			<label>Temperature: </label>
+			<input type="text" name="temperature" id="temperature" size="5" /> </p>
+		<p>
+			<label for="output">Result: </label>
+			<output type="text" name="result" id="result" size="5" /> </p>
+		<p>
+			<input type="button" value="convert" onclick="convert()" /> </p>
+	</form>
+	<div id="divOutput"></div>
+	<script src="13.01.js"></script>
+</body>
+
+</html>

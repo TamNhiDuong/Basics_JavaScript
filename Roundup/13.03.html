@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Identity Number</title>
+	<script type="text/javascript">
+		// function shows details about Identity Number
+		function show() {
+			// Read value of identity number from the input field
+			var id = document.getElementById("identityNumber").value;
+			// Check gender
+			// Get the second last character with charAt() method 
+			var secondLastChar = id.charAt(id.length - 2);
+			// Convert digit text to number with parseInt() function
+			var value = parseInt(secondLastChar);
+			// Check gender with modulo (%) operation (even number-> female, odd number-> male)
+			if (value % 2 == 0) {
+				outPut1 = "Female";
+			}
+			else {
+				outPut1 = "Male";
+			}
+			// Parse birth day information
+			var id;
+			// Take certain characters (dd, mm, yy and separator character)) from the string with subString() method 
+			var dateStr = id.substring(0, 2);
+			var monthStr = id.substring(2, 4);
+			var yearStr = id.substring(4, 6);
+			var separator = id.charAt(6);
+			// Calculate the year with four digits
+			if (separator == "+") {
+				var year = "18" + yearStr;
+			}
+			else if (separator == "-") {
+				var year = "19" + yearStr;
+			}
+			else {
+				var year = "20" + yearStr;
+			}
+			// Concatenate birth day text
+			var outPut2 = "born " + dateStr + "." + monthStr + "." + year;
+			// Write the answer on the page, to the answer div, as content of the div
+			document.getElementById("answer").innerHTML = outPut1 + ", " + outPut2;
+		}
+	</script>
+</head>
+
+<body>
+	<h3>Identity Number</h3>
+	<form>
+		<label>Identity Number: </label>
+		<input type="text" name="identityNumber" id="identityNumber" size="11">
+		<input type="button" value="Show" onClick="show()"> </form>
+	<!-- This is the target where the JavaScript will write the answer -->
+	<div id="answer"></div>
+</body>
+
+</html>
+<!-- test example:
+identityNumber = 241289-123A -> Male, born 24.12.1989
+identityNumber = 280210A122B -> Female, born 28.02.2010	
+identityNumber = 150989+1239 -> Male, born 15.09.1889 			
+-->

@@ -1,0 +1,43 @@
+html {
+  font-size: 35px;
+  font-family: 'Handlee', cursive;
+  padding: 30px 30px 10px 10px; 
+}
+
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+p, li {
+  font-size: 26px;  
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+
+html {
+  background-image:url("../images/background.jpg");
+}
+
+body {
+  width: 600px;
+  margin: 10px auto;
+  background-color: #FAF9FA;
+  padding: 30px 30px 60px 60px;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;  
+  color: #580169;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+
+

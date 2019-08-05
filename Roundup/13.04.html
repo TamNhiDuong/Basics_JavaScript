@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Key Codes</title>
+</head>
+
+<body>
+	<h3>Key Codes</h3>
+	<p>
+		<script type="text/javascript">
+			// Function returns the four digit key codes between min-max 
+			function generateKeyCode(min, max) {
+				// Randomize the key code with Math.random() function
+				var keyCode = Math.round(Math.random() * max) + min;
+				// Convert a number to a string with the toString() method
+				var keyCodetoString = keyCode.toString();
+				// Use the length property of the text string
+				var length;
+				// Add leading zeros to keyCode, if needed (eg. 9 -> 0009) with loop
+				var leadingZero = 4 - keyCodetoString.length;
+				// Return four digit key code as a text
+				for (var i = 1; i <= leadingZero; i++) {
+					keyCode = "0" + keyCode;
+				}
+				return keyCode;
+				// For  hundred times
+				// Call generateKeyCode() function
+				// Print key code to the document
+				document.getElementById("divOutput").innerHTML = keyCode;
+				// If ordinal number of the keyCode MODULO (%) 10 equals zero
+				// Print html line break to the document
+			}
+		</script>
+	</p>
+	<div id="divOutput"></div>
+</body>
+
+</html>

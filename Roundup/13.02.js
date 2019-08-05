@@ -1,0 +1,11 @@
+var d = new Date();
+var weekDay = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+var monthname = new Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+var dateString = weekDay[d.getDay() - 1];
+var dateNumber = d.getDate();
+var monthNumber = monthname[d.getMonth()];
+var yearNumber = d.getFullYear();
+var hour = d.getHours();
+var minute = d.getMinutes();
+var second = d.getMilliseconds();
+document.getElementById("divOutput").innerHTML = dateString + "</br>" + dateNumber + "." + monthNumber + "." + yearNumber + "</br>" + hour + ":" + minute + ":" + second;

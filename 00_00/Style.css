@@ -1,0 +1,25 @@
+﻿body {
+    color: black;
+    padding: 2em;   /* 2 times the current zoom level font size */
+}
+
+footer {
+    margin-top: 64px;   /* Keeps footer a bit separated from main content */
+}
+
+.class1 {
+    color: blue;
+}
+
+#someId {
+    color: red;
+}
+
+/* The 'color' means color of the text */
+/* The latter rules always apply/override */
+
+/* 
+    This is how you write comments in CSS files.
+    The comment can span multiple lines
+*/
+
